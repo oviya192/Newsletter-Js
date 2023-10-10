@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+:root {
+    --background: #5c5555;
+    --headtext: rgb(248, 219, 141);
+    --bgbutton: rgb(238, 200, 95);
+    --textbutton: #fff;
+    --border-radius: 4px;
+    --body-bg: #fff;
+    --icon-color: #fff;
+    --icon-color-hover: rgb(248, 219, 141);
+}
+
+.mode{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    background-color: red;
+}
+
+#dark-mode {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+    border-radius: 50%;
+    font-size: 1.6rem;
+    cursor: pointer;
+    text-align: center;
+    color: var(--icon-color);
+    background: var(--background);
+}
+
+#dark-mode:hover {
+    color: var(--icon-color-hover);
+    transition: 0.3s ease;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+   
+}
+
+section {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: url(https://cdn.pixabay.com/photo/2016/04/30/20/40/background-1363791_1280.jpg); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 0px 25px;
+}
+
+.newsContainer {
+    width:100%;
+    height: 250px;
+    aspect-ratio: 16/4;
+    margin: 30px;
+    padding: 10px;
+    background-color: #5c5555;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.newsContainer .heading h1 {
+    color: var(--headtext);
+    font-size: 33px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    padding: 10px 0px;
+}
+
+.newsemail{
+    height: 100px;
+    width: 500px;
+    position: relative;
+    padding: 0px;
+    border-radius: var(--border-radius);
+    display: table-cell; 
+   
+}
+
+#email-field{
+    width:400px;
+    background: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 15px;
+    margin-left:15px;
+    padding: 10px 10px;
+    position: relative;
+    z-index: 10;
+}
+
+#email-label{
+    display: table-cell;
+    /* background-color: red; */
+    bottom:5px;
+    left: 2px;
+    color: var(--headtext);
+    font-size: 18px;
+
+}
+
+#email-error{
+    position: absolute;
+    top: 42%;
+    left: 60px;
+    font-size: 15px;
+    font-weight: 400;
+    color: red;
+
+}
+
+
+.newsemail p{
+    display: table-row;
+    color: var(--headtext); 
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+#Subscribe{
+    height: 40px;
+    width: 120px;
+    background: var(--bgbutton);
+    color: var(--textbutton);
+    border-radius: var(--border-radius);
+    letter-spacing: 1px;
+    font-size: 15px;
+}
+
+.dark{
+   background-color: black;
+    color: #e6e6e6;
+  
+}
+
+@media screen and (min-width: 280px) and (max-width:480px) {
+    section{
+        padding: 0px 20px;
+        width: 100%;
+    }
+
+    .newsContainer{
+        width: 100%;
+        height: 250px;
+    }
+
+    .newsContainer .heading h1 {
+        font-size: 25px;
+    }
+
+    .newsemail{
+        width: 100%;
+    }
+
+    #email-label{
+      width: 25%;
+    }
+
+    #email-field {
+        width: 100%;
+        margin: 0px 0px;
+    }
+
+}
+
+
+
+
